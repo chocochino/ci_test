@@ -52,9 +52,9 @@ workflows:
   build-deploy:
     jobs:
       - build
-      - deploy-circleci
-        requires:
-          - build
-        filters:
-          branches:
-            only: master
+      - deploy-circleci:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
