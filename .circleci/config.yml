@@ -51,10 +51,10 @@ workflows:
   version: 2
   build-deploy:
     jobs:
-    - build
-    - deploy-circleci
+      - build
+      - deploy-circleci
         requires:
-        - build
+          - build
         filters:
           branches:
             only: master
